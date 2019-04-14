@@ -21,9 +21,9 @@ Webpack enables use of loaders to preprocess files. This allows you to bundle an
 
 ## Basic Setup
 
-`mkdir webpack-demo
-cd webpack-demo
-npm init -y
-npm install webpack --save-dev
-npm install webpack-cli --save-dev`
+`mkdir webpack-demo`
+`cd webpack-demo`
+`npm init -y`
+`npm install webpack --save-dev`
+`npm install webpack-cli --save-dev`
 
