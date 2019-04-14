@@ -29,3 +29,7 @@ npm install webpack --save-dev
 npm install webpack-cli --save-dev
 ```
 
+## Run Webpack
+
+To run webpack type
+`npm run build`
