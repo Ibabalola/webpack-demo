@@ -1,6 +1,6 @@
-import './style.css';
-import Icon from './icon.png';
-import Data from './data.xml';
+import './assets/styling/style.css';
+import Icon from './assets/images/icon.png';
+import Data from './assets/data/data.xml';
 
 function component() {
 	let element = document.createElement('div');
