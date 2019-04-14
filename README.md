@@ -11,7 +11,7 @@ Webpack is used to compile JavaScript modules. Once installed, you can interface
 
 **Modules** - discrete chunks of functionality, they can express their dependencies in a variety of ways (e.g. import statement)
 
- [modules]: https://webpack.js.org/concepts/modules/
+ [modules](https://webpack.js.org/concepts/modules/)
 
 **Supported Modules Types**
 webpack supports modules written in a variety of languages and preprocessors, via loaders. Loadersdescribe to webpack how to process non-JavaScript modules and include these dependencies into your bundles
