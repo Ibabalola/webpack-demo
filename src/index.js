@@ -1,7 +1,7 @@
 function component() {
 	let element = document.createElement('div');
 
-	element.innerHTML = ['webpack', ''].join(' ');
+	element.innerHTML = ['Hello', 'Webpack'].join(' ');
 
 	return element;
 }
