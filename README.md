@@ -41,3 +41,9 @@ CleanWebpackPlugin `clean-webpack-plugin` - Used to clean up the `dist` folder o
 
 ## The Manifest 
 Used to track how all the modules map to the output bundles.
+
+## Source Maps
+
+JavaScript offers source maps, which maps your compiled code back to your original source code. If an error originates from b.js, the source map will tell you exactly that.
+
+ [source maps](https://blog.teamtreehouse.com/introduction-source-maps)
