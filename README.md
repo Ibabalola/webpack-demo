@@ -47,3 +47,7 @@ Used to track how all the modules map to the output bundles.
 JavaScript offers source maps, which maps your compiled code back to your original source code. If an error originates from b.js, the source map will tell you exactly that.
 
  [source maps](https://blog.teamtreehouse.com/introduction-source-maps)
+
+Using source maps allows developers to maintain a straight-forward debugging environment while at the same time optimizing their sites for performance.
+
+In this post you have learned how source maps work and seen how you can generate them using UglifyJS. If you ever ship websites with compressed assets (which you should), it’s really worth taking the time to integrate source map creation into your workflow.
