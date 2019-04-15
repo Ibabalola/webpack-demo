@@ -33,3 +33,11 @@ npm install webpack-cli --save-dev
 
 To run webpack type
 `npm run build`
+
+## NPM Modules
+HtmlWebpackplugin `html-webpack-plugin` - Used to dynamically create html file from which webpack bundles can be served
+
+CleanWebpackPlugin `clean-webpack-plugin` - Used to clean up the `dist` folder of all old webpack generated files before each build.
+
+## The Manifest 
+Used to track how all the modules map to the output bundles.
