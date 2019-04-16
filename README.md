@@ -42,6 +42,80 @@ CleanWebpackPlugin `clean-webpack-plugin` - Used to clean up the `dist` folder o
 ## The Manifest 
 Used to track how all the modules map to the output bundles.
 
+# Development 
+
+Choosing a Develpment Tool
+======
+
+1. webpack's Watch Mode
+
+package.json
+```
+ "scripts": {
+ 	"watch": "webpack --watch"
+ }
+```
+
+2. webpack-dev-server 
+
+```
+npm install --save-dev webpack-dev-server
+```
+
+webpack.config.js
+```
+devServer: {
+	contentBase: './dist'
+}
+```
+
+package.json
+```
+ "scripts": {
+ 	"start": "webpack-dev-server --open"
+ }
+```
+
+3. webpack-dev-middleware
+
+```
+npm install --save-dev express webpack-dev-middleware
+```
+
+webpack.config.json
+```
+output: {
+	publicPath: '/'
+}
+```
+server.js 
+```
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
+const app = express();
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
+
+// Tell express to use the webpack-dev-middleware and use the webpack.config.js
+// configuration file as a base.
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath
+}));
+
+// Serve the files on port 3000.
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!\n');
+});
+```
+
+package.json
+```
+"scripts": {
+	"server": "node server.js",	
+}
+```
 ## Source Maps
 
 JavaScript offers source maps, which maps your compiled code back to your original source code. If an error originates from b.js, the source map will tell you exactly that.
@@ -51,3 +125,8 @@ JavaScript offers source maps, which maps your compiled code back to your origin
 Using source maps allows developers to maintain a straight-forward debugging environment while at the same time optimizing their sites for performance.
 
 In this post you have learned how source maps work and seen how you can generate them using UglifyJS. If you ever ship websites with compressed assets (which you should), it’s really worth taking the time to integrate source map creation into your workflow.
+
+package.json
+```
+devtool: 'inline-source-map'
+```
