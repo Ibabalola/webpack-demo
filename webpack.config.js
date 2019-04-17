@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      title: 'Lazy Loading'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new Visualizer(),
