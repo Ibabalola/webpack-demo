@@ -1,24 +1,17 @@
+import printMe from './print.js';
 import './styles.css';
 
 function component() {
 	let element = document.createElement('div');
 	let btn = document.createElement('button');
-	let br = document.createElement('br');
-	let arr = ['Hello', 'Webpack'];
 
+	let arr = ['Another', 'module', 'loaded'];
+	element.innerHTML = arr.join(' ');
 
 	btn.innerHTML = 'Click me and check the console!';
-	element.innerHTML = arr.join(' ');
-	element.appendChild(br);
+	btn.onclick = printMe;
+
 	element.appendChild(btn);
-
-	// Note that because a network request is involved, some indication 
-	// of loading would need to be shown in a production-level site/app
-	btn.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
-		let print = module.default;
-
-		print();
-	})
 
 	return element;
 }
