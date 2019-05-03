@@ -29,6 +29,13 @@ npm install webpack --save-dev
 npm install webpack-cli --save-dev
 ```
 
+Create the following files
+1. README.md file
+2. .gitignore file
+3. webpack.config.js file
+4. dist directory for webpack files
+5. add npm scripts to package.json
+
 ## Run Webpack
 
 To run webpack type
